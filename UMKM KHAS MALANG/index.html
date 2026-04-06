@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warung Malang - Makanan Khas Malang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">🍜 Warung Malang</div>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#pesan">Pesan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">✨ Autentik & Lezat</div>
+    <h1>Cita Rasa Asli<br><span>Kota Malang</span></h1>
+    <p>Nikmati kelezatan makanan khas Malang yang autentik, diantar langsung ke pintu rumahmu.</p>
+    <div class="hero-buttons">
+      <a href="#menu" class="btn-primary">🍽️ Lihat Menu</a>
+      <a href="#pesan" class="btn-secondary">Pesan Sekarang</a>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#fdf6ec" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- GALERI KOTA MALANG -->
+  <div class="galeri-kota">
+    <div class="galeri-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kampung_Warna_Warni_Malang.jpg/800px-Kampung_Warna_Warni_Malang.jpg"
+           alt="Kampung Warna Warni Malang"
+           onerror="this.src='https://via.placeholder.com/800x400?text=Kampung+Warna+Warni+Malang'">
+      <div class="galeri-caption">Kampung Warna Warni</div>
+    </div>
+    <div class="galeri-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Alun-alun_Malang.jpg/800px-Alun-alun_Malang.jpg"
+           alt="Alun-alun Malang"
+           onerror="this.src='https://via.placeholder.com/800x400?text=Alun-alun+Malang'">
+      <div class="galeri-caption">Alun-alun Malang</div>
+    </div>
+    <div class="galeri-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Jalan_Ijen_Malang.jpg/800px-Jalan_Ijen_Malang.jpg"
+           alt="Jalan Ijen Malang"
+           onerror="this.src='https://via.placeholder.com/800x400?text=Jalan+Ijen+Malang'">
+      <div class="galeri-caption">Jalan Ijen</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-item">
+      <div class="number">500+</div>
+      <div class="label">Pelanggan Puas</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">7</div>
+      <div class="label">Menu Pilihan</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">5★</div>
+      <div class="label">Rating Rata-rata</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">3 Thn</div>
+      <div class="label">Pengalaman</div>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="section-header fade-in">
+      <div class="section-tag">🍜 Menu Kami</div>
+      <h2>Pilihan Makanan Khas Malang</h2>
+      <p>Semua dibuat dari bahan segar pilihan dengan resep turun-temurun.</p>
+    </div>
+    <div class="menu-grid" id="menu-grid"></div>
+  </section>
+
+  <!-- FORM PESAN -->
+  <section id="pesan">
+    <div class="section-header fade-in">
+      <div class="section-tag">📦 Order</div>
+      <h2>Pesan Sekarang</h2>
+      <p>Isi form di bawah dan pesananmu akan segera kami proses.</p>
+    </div>
+    <div class="form-wrap fade-in">
+      <form id="form-pesan" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Contoh: Budi Santoso" required />
+          </div>
+          <div class="form-group">
+            <label for="telepon">Nomor WhatsApp</label>
+            <input type="tel" id="telepon" placeholder="08123456789" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat Pengiriman</label>
+          <input type="text" id="alamat" placeholder="Jl. Contoh No. 1, Malang" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="menu-pilihan">Pilih Menu</label>
+            <select id="menu-pilihan" required>
+              <option value="" disabled selected>-- Pilih Menu --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="jumlah">Jumlah Porsi</label>
+            <input type="number" id="jumlah" placeholder="1" min="1" value="1" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="catatan">Catatan Tambahan</label>
+          <textarea id="catatan" placeholder="Contoh: tidak pedas, tambah kerupuk, dll." rows="3"></textarea>
+        </div>
+        <button type="submit">🚀 Kirim Pesanan</button>
+        <p id="status-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak">
+    <div class="section-header fade-in">
+      <div class="section-tag">📍 Kontak</div>
+      <h2>Hubungi Kami</h2>
+    </div>
+    <div class="kontak-grid">
+      <div class="kontak-card fade-in">
+        <div class="icon">📍</div>
+        <p>Jl. Soekarno Hatta No. 10<br>Malang, Jawa Timur</p>
+      </div>
+      <div class="kontak-card fade-in">
+        <div class="icon">💬</div>
+        <p>WhatsApp<br><a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
+      </div>
+      <div class="kontak-card fade-in">
+        <div class="icon">🕐</div>
+        <p>Jam Operasional<br>Setiap hari 08.00 – 21.00 WIB</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>🍜 &copy; 2026 Warung Malang — Dibuat dengan ❤️ dari Kota Apel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
